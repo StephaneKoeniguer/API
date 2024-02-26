@@ -8,9 +8,12 @@ const clientRoute = require("./routes/clientRoute");
 const app = express();
 app.use(express.json());
 
+
+// routes
 app.use("/api",factureRoute);
 app.use("/api",clientRoute);
 
 const server = http.createServer(app);
 
+// port d'accès
 server.listen(3001);
