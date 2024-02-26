@@ -1,6 +1,6 @@
 const db = require("../utils/database");
 
-// récupère toutes les factures
+// Récupère toutes les factures
 exports.fetchAllFacture = async() =>{
     const result = await db.execute("SELECT * FROM factures")
     return result[0];
@@ -40,7 +40,7 @@ exports.updateFacture = async (id, body) => {
 };
 
 
-// supprimer une facture
+// Supprimer une facture
 exports.deleteFacture = async(id) =>{
     const result = await db.execute("DELETE FROM factures WHERE id = :id",
         {
