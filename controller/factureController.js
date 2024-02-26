@@ -1,6 +1,6 @@
 const factureService = require("../service/factureService");
 
-// récupère toutes les factures
+// Récupère toutes les factures
 exports.fetchAll = async (req, res) => {
     const factures = await factureService.fetchAllFacture();
     
@@ -12,7 +12,7 @@ exports.fetchAll = async (req, res) => {
     res.status(200).json(response);
 }
 
-// ajout d'une facture
+// Ajout d'une facture
 exports.add = async (req, res) => {
     const factures = await factureService.addNewFacture(req.body);
 
@@ -25,7 +25,7 @@ exports.add = async (req, res) => {
     res.status(200).json(response);
 }
 
-// mise à jour d'une facture
+// Mise à jour d'une facture
 exports.update = async (req, res) => {
     const factures = await factureService.updateFacture(req.params.id, req.body);
 
@@ -38,7 +38,7 @@ exports.update = async (req, res) => {
     res.status(200).json(response);
 }
 
-// supprimer une facture
+// Supprimer une facture
 exports.delete = async (req, res) => {
     const factures = await factureService.deleteFacture(req.params.id);
 
