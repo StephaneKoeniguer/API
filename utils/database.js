@@ -3,9 +3,9 @@ const mysql = require("mysql2");
 //BDD
 const pool = mysql.createPool({
     host: "localhost",
-    user: "stephane",
+    user: "",
     database: "api",
-    password: "Stephane2304",
+    password: "",
     port: 3306,
     namedPlaceholders: true
 });
